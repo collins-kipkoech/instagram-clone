@@ -18,12 +18,11 @@ class Image(models.Model):
 
 class Profile(models.Model):
     author = models.OneToOneField(User,on_delete=models.CASCADE)
-    profile_photo = CloudinaryField('image',null=True)
-    # image = models.ImageField(default='default.jpg',upload_to='profile_pics')
+    # profile_photo = CloudinaryField('image',null=True)
+    image = models.ImageField(default='default.jpg',upload_to='profile_pictures')
     bio = models.TextField()
 
-    def __str__(self):
-        return self.user.author
+    
     
 
     
