@@ -1,7 +1,53 @@
 {% extends 'instagram/base.html' %}
 {% block content %}
+{%for post in posts %}
+<blockquote class="quote-card">
+    <a class="mr-2" href="#">{{post.author}}</a>
+    <p>
+        {{post.content}}
+    </p>
+  
 
-    <h1>works</h1>
+  <cite> <span><p>image</p></span>
+    <span><a href=""><i class="fas fa-thumbs-up"></i></a></span>
+    <span> </span>
+    <span><a href=""><i class="fas fa-thumbs-down"></i></a></span>
+  </cite>
+  <p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Add Comment
+    </a>
+   
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseComments" aria-expanded="false" aria-controls="collapseComments">
+      view Comments
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <form action="" method="get">
+        <input style="padding: 3px;margin: 3px;" placeholder="Write comment" class="form-control" type="text" name="comment">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <button class="form-control" type="submit">Send&nbsp;&nbsp;&nbsp;<i class="fas fa-paper-plane"></i></button>
+
+          </div>
+          <div class="col"></div>
+        </div>
+      </form>                
+    </div>
+  </div>
+  <div class="collapse" id="collapseComments">
+    <div class="card card-body">
+      <ul class="list-group">
+
+      
+    </ul>
+
+    </div>
+  </div>
+</blockquote>
+{%endfor%}
     
 
 {% endblock %}
