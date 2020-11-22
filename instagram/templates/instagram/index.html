@@ -2,13 +2,13 @@
 {% block content %}
 {%for post in posts %}
 <blockquote class="quote-card">
-    <a class="mr-2" href="#">{{post.author}}</a>
-    <p>
-        {{post.content}}
-    </p>
+    <a class="mr-2" href="#">{{post.author}}</a><br>
+    <img src="{{post.image.url}}" alt="" style="width: 500px; height: 400px;">
+        
+    
   
 
-  <cite> <span><p>image</p></span>
+  <cite> <span><p></p></span>
     <span><a href=""><i class="fas fa-thumbs-up"></i></a></span>
     <span> </span>
     <span><a href=""><i class="fas fa-thumbs-down"></i></a></span>
