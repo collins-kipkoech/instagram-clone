@@ -1,0 +1,9 @@
+{% extends 'instagram/base.html' %}
+{% block content %}
+<p>Are you sure you want to delete? </p>
+
+<form method="POST">
+    <a href="{% url 'index' %}">Cancel</a>
+    <input type="submit" name="Confirm">
+</form>
+{% endblock %}

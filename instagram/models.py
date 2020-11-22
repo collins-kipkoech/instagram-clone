@@ -5,9 +5,9 @@ from django.utils import timezone
 
 # Create your models here.
 class Image(models.Model):
-    image = CloudinaryField('image',null=False,default=True)
+    image = CloudinaryField('image')
     title = models.CharField(max_length=500,null=True)
-    caption = models.TextField(null=True)
+    caption = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     date_posted = models.DateTimeField(default=timezone.now)
     likes=models.IntegerField(null=True, default=0)

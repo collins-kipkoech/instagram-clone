@@ -38,6 +38,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'instagram.apps.InstagramConfig',
     'bootstrap4',
+    'cloudinary',
     'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
