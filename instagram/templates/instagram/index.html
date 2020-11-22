@@ -2,8 +2,9 @@
 {% block content %}
 {%for post in posts %}
 <blockquote class="quote-card">
-    <a class="mr-2" href="#">{{post.author}}</a><br>
-    <img src="{{post.image.url}}" alt="" style="width: 500px; height: 400px;">
+  <a class="mr-2" href="#"><img src=""></a><br>
+  <a class="mr-2" href="#">{{post.author}}</a><br>
+  <img src="{{post.image.url}}" alt="" style="width: 500px; height: 400px;">
         
     
   
@@ -15,7 +16,7 @@
   </cite>
   <p>
     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      Add Comment
+      Comment
     </a>
    
     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseComments" aria-expanded="false" aria-controls="collapseComments">
