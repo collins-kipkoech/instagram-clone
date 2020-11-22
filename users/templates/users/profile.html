@@ -1,4 +1,16 @@
 {% extends 'instagram/base.html' %}
 {% block content %}
-    {{user.username}}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{user.profile.image.url}}" alt="Card image cap">
+    
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ user.username}}</li>
+      <li class="list-group-item">{{user.email}}</li>
+      
+    </ul>
+    <div class="card-body">
+        
+        <p class="card-text">{{user.bio}}</p>
+      </div>
+  </div>
 {% endblock content %}
