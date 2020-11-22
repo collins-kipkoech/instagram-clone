@@ -131,6 +131,9 @@ STATICFILES_DIRS = [
 ]
 
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 
 cloudinary.config( 
   cloud_name = "dtydg6xpa", 
