@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Image
 from .forms import ImageForm
 from cloudinary.forms import cl_init_js_callbacks
+from django.contrib import messages
 
 
 
@@ -13,20 +14,20 @@ def index(request):
 
 
 def uploadImage(request):
-    form = ImageForm()
     if request.method == 'POST':
-        
-        form = ImageForm(request.POST)
+        form = ImageForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, f'your photo has been uploaded successfully')
             return redirect('index')
 
-    return render(request,'instagram/upload.html',{'form':form})
 
-def deleteImage(request,pk):
-    post = Image.objects.get(id=pk)
-    
-    return render(request,'instagram/delete.html',{'post':post})
+    form = ImageForm()
+    ctx = {'form':form}
+
+    return render(request,'instagram/upload.html',ctx)
+
+
 
 
 
