@@ -17,6 +17,7 @@ def uploadImage(request):
     if request.method == 'POST':
         form = ImageForm(request.POST,request.FILES)
         if form.is_valid():
+            form.instance.user = request.user
             form.save()
             messages.success(request, f'your photo has been uploaded successfully')
             return redirect('index')

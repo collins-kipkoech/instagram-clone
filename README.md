@@ -5,9 +5,12 @@ Instagram clone is a simple web based platform where a user can create account, 
 
 Links
 
-Active link:
+Active link: https://ck-instagram-clone.herokuapp.com/
 
 Figma link: https://www.figma.com/proto/3Oq4w5RA4740dRiC0rFUDZ/instagram?node-id=2%3A1&scaling=min-zoom
+
+ Lucid chart link: 
+
 
 Screenshots
 
